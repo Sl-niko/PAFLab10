@@ -19,6 +19,8 @@ public class Item {
 		return con;
 	}
 
+
+
 	public String readItems() {
 		String output = "";
 		try {
@@ -46,9 +48,10 @@ public class Item {
 				output += "<td>" + itemPrice + "</td>";
 				output += "<td>" + itemDesc + "</td>";
 				// buttons
-				output += "<td><input name='btnUpdate'  type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger'  data-itemid='"
-						+ itemID + "'>" + "</td></tr>";
+				output += "<td><input name='btnUpdate' type='button' value='Update' "
+						+ "class='btnUpdate btn btn-secondary' data-itemid='" + itemID + "'></td>"
+						+ "<td><input name='btnRemove' type='button' value='Remove' "
+						+ "class='btnRemove btn btn-danger' data-itemid='" + itemID + "'></td></tr>";
 			}
 			con.close();
 			// Complete the html table
@@ -59,7 +62,6 @@ public class Item {
 		}
 		return output;
 	}
-
 	public String insertItem(String code, String name, String price, String desc) {
 		String output = "";
 		try {
